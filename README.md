@@ -6,3 +6,7 @@
 - JavaScript
 
 ### [Check Out The Color-Generator!](https://colormix-palette-generator.netlify.app/)
+
+
+https://github.com/user-attachments/assets/d68e0bab-9ea8-4217-9d05-7c89eb7ce36a
+
