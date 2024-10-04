@@ -4,3 +4,5 @@
 - HTML
 - CSS
 - JavaScript
+
+### [Check Out The Color-Generator!](https://colormix-palette-generator.netlify.app/)
