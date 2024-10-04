@@ -267,6 +267,107 @@
       font-size: 40px;
     }
   }
+
+  /* Container for the palette generator */
+.color-palette__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  padding: 50px;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  border-radius: 10px;
+  max-width: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Title styling */
+.color-palette__container h2 {
+  font-size: 24px;
+  color: #f7f7f7;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Palette styling */
+.palette {
+  background-color: #f7f7f7; 
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.palette_history {
+  background-color: #f7f7f7; 
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 6px;
+  border-radius: 10px;
+  margin-top: 20px;
+  
+}
+
+/* Each color block in the palette */
+.color-block-history {
+  width: 100px;
+  height: 90px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+/* Each color block in the palette */
+.color-block {
+  width: 90px;
+  height: 90px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Button styling */
+#generate-btn {
+  padding: 12px 24px;
+  background-color: #833ab4; /* Primary button color */
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for button */
+#generate-btn:hover {
+  background-color: #ff6a00; /* Hover color */
+}
+
+/* Media query for responsive behavior */
+@media (max-width: 600px) {
+  .palette {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .color-block {
+    margin-bottom: 10px;
+  }
+
+  #generate-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
   
   /* About Section */
   .main {
@@ -471,8 +572,8 @@
     }
   }
   
-  /* Services Section */
-  .services {
+  /* history Section */
+  .history {
     background: #131313;
     display: flex;
     flex-direction: column;
@@ -482,7 +583,7 @@
     padding: 10rem 0;
   }
   
-  .services h1 {
+  .history h1 {
     background-color: #ff8177;
     background-image: linear-gradient(to right, #ff0844 0%, #f7673c 100%);
     background-size: 100%;
@@ -494,13 +595,13 @@
     font-size: 2.5rem;
   }
   
-  .services__wrapper {
+  .history__wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
   }
   
-  .services__card {
+  .history__card {
     margin: 10px;
     height: 425px;
     width: 300px;
@@ -513,7 +614,7 @@
     transition: 0.3s ease-in;
   }
   
-  .services__card:nth-child(2) {
+  .history__card:nth-child(2) {
     background: #1fa2ff; /* fallback for old browsers */
     background: -webkit-linear-gradient(
       to right,
@@ -529,7 +630,7 @@
     ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
   
-  .services__card:nth-child(3) {
+  .history__card:nth-child(3) {
     background-image: linear-gradient(
       -225deg,
       #231557 0%,
@@ -539,23 +640,23 @@
     );
   }
   
-  .services__card h2 {
+  .history__card h2 {
     text-align: center;
   }
   
-  .services__card p {
+  .history__card p {
     text-align: center;
     margin-top: 24px;
     font-size: 20px;
   }
   
-  .services__btn {
+  .history__btn {
     display: flex;
     justify-content: center;
     margin-top: 16px;
   }
   
-  .services__card button {
+  .history__card button {
     color: #fff;
     padding: 14px 24px;
     border: none;
@@ -565,24 +666,24 @@
     font-size: 1rem;
   }
   
-  .services__card button:hover {
+  .history__card button:hover {
     cursor: pointer;
   }
   
-  .services__card:hover {
+  .history__card:hover {
     transform: scale(1.075);
     transition: 0.3s ease-in;
     cursor: pointer;
   }
   
   @media screen and (max-width: 1300px) {
-    .services__wrapper {
+    .history__wrapper {
       grid-template-columns: 1fr 1fr;
     }
   }
   
   @media screen and (max-width: 768px) {
-    .services__wrapper {
+    .history__wrapper {
       grid-template-columns: 1fr;
     }
   }
@@ -703,3 +804,5 @@
       width: 100%;
     }
   }
+
+  
